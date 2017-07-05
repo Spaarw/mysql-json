@@ -1,0 +1,9 @@
+{
+  "name": "mysql-json",
+  "private":false,
+  "author": "Sparw jenkins",
+  "version": "0.1",
+  "dependencies": {
+	"mysql": ">=2.12.0"
+  }
+}
