@@ -1,9 +1,32 @@
 {
   "name": "mysql-json",
-  "private":false,
-  "author": "Sparw jenkins",
-  "version": "0.1",
+  "version": "1.0.0",
+  "description": "Simple Node.js module\u001b[D\u001b[D\u001b[D\u001bNode.js module which implement select, update and delete mysql queries (Using package mysql)",
+  "main": "index.js",
   "dependencies": {
-	"mysql": ">=2.12.0"
-  }
+    "mysql": ">=2.12.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Spaarw/mysql-json.git"
+  },
+  "keywords": [
+    "Node.js",
+    "mysql",
+    "json",
+    "insert",
+    "update",
+    "delete",
+    "query"
+  ],
+  "author": "Sparw Jenkins",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Spaarw/mysql-json/issues"
+  },
+  "homepage": "https://github.com/Spaarw/mysql-json#readme"
 }
