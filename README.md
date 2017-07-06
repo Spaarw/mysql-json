@@ -9,7 +9,10 @@ Simple Node.js mysql module
 
 ## Usage
 
+<code>
   var MysqlJson = require('mysql-json');
+
+
   var mysqlJson = new MysqlJson({
     host:'127.0.0.1',
     user:'root',
@@ -52,6 +55,7 @@ Simple Node.js mysql module
     if (err) throw err;
     console.log(response);
   });
+</code>
 
 
 ## Contributing
