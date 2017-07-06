@@ -11,22 +11,25 @@ Simple Node.js mysql module
 
 <code>
   var MysqlJson = require('mysql-json');
+</code>
 
-
+<code>
   var mysqlJson = new MysqlJson({
     host:'127.0.0.1',
     user:'root',
     password:'root',
     database:'myDatabase'
   });
+</code>
 
-
+<code>
   mysqlJson.query("SELECT * FROM users WHERE login LIKE '%admin%'", function(err, response) {
     if (err) throw err;
     console.log(response);
   });
+</code>
 
-
+<code>
   mysqlJson.insert('myTable', {
     login:'root',
     firstName:'John',
@@ -36,8 +39,9 @@ Simple Node.js mysql module
     if (err) throw err;
     console.log(response);
   });
+</code>
 
-
+<code>
   mysqlJson.update('myTable', {
     lastName:'Foo',
     age:27
@@ -47,8 +51,9 @@ Simple Node.js mysql module
     if (err) throw err;
     console.log(response);
   });
+</code>
 
-
+<code>
   mysqlJson.delete('myTable', {
     login:'root'
   }, function(err, response) {
