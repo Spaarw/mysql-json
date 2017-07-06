@@ -17,24 +17,40 @@ Simple Node.js mysql module
     database:'myDatabase'
   });
 
-  // Query method
+
   mysqlJson.query("SELECT * FROM users WHERE login LIKE '%admin%'", function(err, response) {
-
+    if (err) throw err;
+    console.log(response);
   });
 
-  // Insert method
+
   mysqlJson.insert('myTable', {
-
+    login:'root',
+    firstName:'John',
+    lastName:'Doe',
+    age:45
+  }, function(err, response) {
+    if (err) throw err;
+    console.log(response);
   });
 
-  // Update method
+
   mysqlJson.update('myTable', {
-
+    lastName:'Foo',
+    age:27
+  }, {
+  login:{operator:'=', value:'root'}
+  }, function(err, response) {
+    if (err) throw err;
+    console.log(response);
   });
 
-  // Delete method
-  mysqlJson.delete('myTable', {
 
+  mysqlJson.delete('myTable', {
+    login:'root'
+  }, function(err, response) {
+    if (err) throw err;
+    console.log(response);
   });
 
 

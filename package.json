@@ -1,7 +1,7 @@
 {
   "name": "mysql-json",
-  "version": "1.0.0",
-  "description": "Simple Node.js module\u001b[D\u001b[D\u001b[D\u001bNode.js module which implement select, update and delete mysql queries (Using package mysql)",
+  "version": "0.1.0",
+  "description": "Simple Node.js module which allows insert, update and delete mysql queries (Using package mysql)",
   "main": "index.js",
   "dependencies": {
     "mysql": ">=2.12.0"
