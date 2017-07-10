@@ -9,21 +9,24 @@ npm install mysql-json
 
 ## Declaration
 
-<code>
-var MysqlJson = require('mysql-json');
-var mysqlJson = new MysqlJson(options); // Takes mysql package options
-</code>
+<pre>
+    <code>
+        var MysqlJson = require('mysql-json');
+        var mysqlJson = new MysqlJson(options); // Takes mysql package options
+    </code>
+</pre>
 
 ## Methods
 
 All methods takes a callback which is called with 2 parameters (err, response)
 
-<code>mysqlJson.connect(callback); // Used to return a mysql connection</code>
-<code>mysqlJson.query(mysqlQuery, callback); // Used to launch a query to mysql server</code>
-<code>mysqlJson.insert(tableName, dataToInsert, callback); // Used to insert a new row with JSON data</code>
-<code>mysqlJson.update(tableName, data, conditions, callback); // Used to update some row(s) matching with JSON conditions</code>
-<code>mysqlJson.delete(tableName, conditions, callback); // Used to delete some row(s) matching with JSON conditions </code>
-
+<pre><code>
+    mysqlJson.connect(callback); // Used to return a mysql connection
+    mysqlJson.query(mysqlQuery, callback); // Used to launch a query to mysql server
+    mysqlJson.insert(tableName, dataToInsert, callback); // Used to insert a new row with JSON data
+    mysqlJson.update(tableName, data, conditions, callback); // Used to update some row(s) matching with JSON conditions
+    mysqlJson.delete(tableName, conditions, callback); // Used to delete some row(s) matching with JSON conditions
+ <code></pre>
 
 Condition Objects are builds has to be build with this schema :
 {
