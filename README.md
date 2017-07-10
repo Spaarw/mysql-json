@@ -25,19 +25,23 @@ All methods takes a callback which is called with 2 parameters (err, response)
 </code></pre>
 
 <pre><code>
-    mysqlJson.query(mysqlQuery, callback); // Used to launch a query to mysql server
+    // Used to launch a query to mysql server
+    mysqlJson.query(mysqlQuery, callback);
 </code></pre>
 
 <pre><code>
-    mysqlJson.insert(tableName, dataToInsert, callback); // Used to insert a new row with JSON data
+    // Used to insert a new row with JSON data
+    mysqlJson.insert(tableName, dataToInsert, callback);
 </code></pre>
 
 <pre><code>
-    mysqlJson.update(tableName, data, conditions, callback); // Used to update some row(s) matching with JSON conditions
+    // Used to update some row(s) matching with JSON conditions
+    mysqlJson.update(tableName, data, conditions, callback);
 </code></pre>
 
 <pre><code>
-    mysqlJson.delete(tableName, conditions, callback); // Used to delete some row(s) matching with JSON conditions
+    // Used to delete some row(s) matching with JSON conditions
+    mysqlJson.delete(tableName, conditions, callback);
  </code></pre>
 
 Condition Objects are builds has to be build with this schema :
