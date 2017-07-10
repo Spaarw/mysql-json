@@ -1,11 +1,35 @@
 # mysql-json
 =========
 
-Simple Node.js mysql module
+Simple Node.js mysql module using [mysql] (https://github.com/mysqljs/mysql)
 
 ## Installation
 
-  npm install mysql-json
+npm install mysql-json
+
+## Declaration
+
+<code>
+var MysqlJson = require('mysql-json');
+var mysqlJson = new MysqlJson(options); // Takes mysql package options
+</code>
+
+## Methods
+
+All methods takes a callback which is called with 2 parameters (err, response)
+
+<code>mysqlJson.connect(callback); // Used to return a mysql connection</code>
+<code>mysqlJson.query(mysqlQuery, callback); // Used to launch a query to mysql server</code>
+<code>mysqlJson.insert(tableName, dataToInsert, callback); // Used to insert a new row with JSON data</code>
+<code>mysqlJson.update(tableName, data, conditions, callback); // Used to update some row(s) matching with JSON conditions</code>
+<code>mysqlJson.delete(tableName, conditions, callback); // Used to delete some row(s) matching with JSON conditions </code>
+
+
+Condition Objects are builds has to be build with this schema :
+{
+    column1: {operator:'=', value:'test'},
+    column2: {operator:'>', value:29},
+}
 
 ## Usage
 
@@ -43,12 +67,10 @@ Simple Node.js mysql module
 
 <pre><code>
   // Update any documents and set lastname=foo, age=47 where login=root
-  mysqlJson.update('myTable', {
-    lastName:'Foo',
-    age:27
-  }, {
-  login:{operator:'=', value:'root'}
-  }, function(err, response) {
+  mysqlJson.update('myTable',
+  {lastName:'Foo', age:27},
+  {login:{operator:'=', value:'root'}},
+  function(err, response) {
     if (err) throw err;
     console.log(response);
   });
@@ -57,7 +79,7 @@ Simple Node.js mysql module
 <pre><code>
   // Delete any documents where login=root
   mysqlJson.delete('myTable', {
-    login:'root'
+    login:{operator:'=', value:'root'}
   }, function(err, response) {
     if (err) throw err;
     console.log(response);
