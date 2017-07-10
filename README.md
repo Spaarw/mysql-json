@@ -26,13 +26,15 @@ All methods takes a callback which is called with 2 parameters (err, response)
     mysqlJson.insert(tableName, dataToInsert, callback); // Used to insert a new row with JSON data
     mysqlJson.update(tableName, data, conditions, callback); // Used to update some row(s) matching with JSON conditions
     mysqlJson.delete(tableName, conditions, callback); // Used to delete some row(s) matching with JSON conditions
- <code></pre>
+ </code></pre>
 
 Condition Objects are builds has to be build with this schema :
+<pre><code>
 {
     column1: {operator:'=', value:'test'},
     column2: {operator:'>', value:29},
 }
+</code></pre>
 
 ## Usage
 
