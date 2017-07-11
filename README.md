@@ -9,12 +9,10 @@ npm install mysql-json
 
 ## Declaration
 
-<pre>
-    <code>
-        var MysqlJson = require('mysql-json');
-        var mysqlJson = new MysqlJson(options); // Takes mysql package options
-    </code>
-</pre>
+```javascript
+    var MysqlJson = require('mysql-json');
+    var mysqlJson = new MysqlJson(options); // Takes mysql package options
+```
 
 ## Methods
 
@@ -45,7 +43,7 @@ All methods takes a callback which is called with 2 parameters (err, response)
     mysqlJson.delete(tableName, conditions, callback);
  </code></pre>
 
-Condition Objects are builds has to be build with this schema :
+Condition Objects has to be build with this schema :
 
 <pre><code>
 {
