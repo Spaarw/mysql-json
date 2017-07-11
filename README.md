@@ -18,43 +18,43 @@ npm install mysql-json
 
 All methods takes a callback which is called with 2 parameters (err, response)
 
-<pre><code>
+```javascript
     // Used to return a mysql connection
     mysqlJson.connect(callback);
-</code></pre>
+```
 
-<pre><code>
+```javascript
     // Used to launch a query to mysql server
     mysqlJson.query(mysqlQuery, callback);
-</code></pre>
+```
 
-<pre><code>
+```javascript
     // Used to insert a new row with JSON data
     mysqlJson.insert(tableName, dataToInsert, callback);
-</code></pre>
+```
 
-<pre><code>
+```javascript
     // Used to update some row(s) matching with JSON conditions
     mysqlJson.update(tableName, data, conditions, callback);
-</code></pre>
+```
 
-<pre><code>
+```javascript
     // Used to delete some row(s) matching with JSON conditions
     mysqlJson.delete(tableName, conditions, callback);
- </code></pre>
+```
 
 Condition Objects has to be build with this schema :
 
-<pre><code>
+```javascript
 {
     column1: {operator:'=', value:'test'},
     column2: {operator:'>', value:29},
 }
-</code></pre>
+```
 
 ## Usage
 
-<pre><code>
+```javascript
   // Initialization
   var MysqlJson = require('mysql-json');
   var mysqlJson = new MysqlJson({
@@ -63,17 +63,17 @@ Condition Objects has to be build with this schema :
     password:'root',
     database:'myDatabase'
   });
-</code></pre>
+```
 
-<pre><code>
+```javascript
   // Query method
   mysqlJson.query("SELECT * FROM users WHERE login LIKE '%admin%'", function(err, response) {
     if (err) throw err;
     console.log(response);
   });
-</code></pre>
+```
 
-<pre><code>
+```javascript
   // Insert new document with login=root, firstname=John, lastName=Doe, Age=45
   mysqlJson.insert('myTable', {
     login:'root',
@@ -84,9 +84,9 @@ Condition Objects has to be build with this schema :
     if (err) throw err;
     console.log(response);
   });
-</code></pre>
+```
 
-<pre><code>
+```javascript
   // Update any documents and set lastname=foo, age=47 where login=root
   mysqlJson.update('myTable',
   {lastName:'Foo', age:27},
@@ -95,9 +95,9 @@ Condition Objects has to be build with this schema :
     if (err) throw err;
     console.log(response);
   });
-</code></pre>
+```
 
-<pre><code>
+```javascript
   // Delete any documents where login=root
   mysqlJson.delete('myTable', {
     login:{operator:'=', value:'root'}
@@ -105,7 +105,7 @@ Condition Objects has to be build with this schema :
     if (err) throw err;
     console.log(response);
   });
-</code></pre>
+```
 
 
 ## Contributing
