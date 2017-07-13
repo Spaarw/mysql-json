@@ -16,7 +16,7 @@ npm install mysql-json
 
 ## Methods
 
-All methods takes a callback which is called with 2 parameters (err, response)
+All methods take a callback which is called with 2 parameters (err, response)
 
 ```javascript
     // Used to return a mysql connection
