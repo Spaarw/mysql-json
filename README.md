@@ -29,6 +29,11 @@ All methods take a callback which is called with 2 parameters (err, response)
 ```
 
 ```javascript
+    // Used to find a row by primary key
+    mysqlJson.findById(tableName, id, callback);
+```
+
+```javascript
     // Used to insert a new row with JSON data
     mysqlJson.insert(tableName, dataToInsert, callback);
 ```
@@ -68,6 +73,14 @@ Condition Objects has to be build with this schema :
 ```javascript
   // Query method
   mysqlJson.query("SELECT * FROM users WHERE login LIKE '%admin%'", function(err, response) {
+    if (err) throw err;
+    console.log(response);
+  });
+```
+
+```javascript
+  // Find a document where Primary Key = 1
+  mysqlJson.findById('myTable', 1, function(err, response) {
     if (err) throw err;
     console.log(response);
   });
