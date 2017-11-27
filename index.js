@@ -10,9 +10,9 @@ require('./lib/toolsbox');
 var Connection = require('./lib/connection');
 
 /**
- *
- * @param host
- * @returns {module.exports}
+ * CONSTRUCTOR
+ * Used to initialise mysql-json
+ * @param {Object} host
  */
 module.exports = function(host) {
 

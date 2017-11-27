@@ -30,7 +30,7 @@ All methods take a callback which is called with 2 parameters (err, response)
 
 ```javascript
     // Used to find a row by primary key
-    mysqlJson.findById(tableName, id, callback);
+    mysqlJson.findByPrimaryKey(tableName, id, callback);
 ```
 
 ```javascript
@@ -80,7 +80,7 @@ Condition Objects has to be build with this schema :
 
 ```javascript
   // Find a document where Primary Key = 1
-  mysqlJson.findById('myTable', 1, function(err, response) {
+  mysqlJson.findByPrimaryKey('myTable', 1, function(err, response) {
     if (err) throw err;
     console.log(response);
   });
